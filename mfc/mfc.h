@@ -17,4 +17,16 @@ class MyFrame :public CFrameWnd
 public:
 	// 窗口构造函数
 	MyFrame();
+
+	// 声明消息映射
+	DECLARE_MESSAGE_MAP()
+
+	// 声明鼠标左击的处理函数
+	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
+
+	// 声明键盘按键的处理函数
+	afx_msg void OnChar(UINT nChar, UINT nRepCnt, UINT nFlags);
+
+	// 声明绘图的处理函数
+	afx_msg void OnPaint();
 };
