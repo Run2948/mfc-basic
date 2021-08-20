@@ -7,7 +7,7 @@ class MyApp : public CWinApp
 {
 public:
 	// MFC ³ÌÐòÈë¿Ú
-	virtual BOOL InitInstance() override;
+	virtual BOOL InitInstance();
 
 };
 
