@@ -21,6 +21,15 @@ public:
 
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	virtual void OnInitialUpdate();
+private:
+	// 树控件
+	CTreeCtrl *m_treeCtrl;
+	// 图标列表
+	CImageList m_imageList;
+public:
+	afx_msg void OnTvnSelchanged(NMHDR* pNMHDR, LRESULT* pResult);
 };
 
 
