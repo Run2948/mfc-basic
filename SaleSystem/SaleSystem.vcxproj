@@ -183,9 +183,11 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="CDisplayView.h" />
-    <ClInclude Include="CSelectView.h" />
+    <ClInclude Include="DisplayView.h" />
+    <ClInclude Include="LoginDlg.h" />
+    <ClInclude Include="SelectView.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="InfoFile.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
@@ -195,8 +197,10 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CDisplayView.cpp" />
-    <ClCompile Include="CSelectView.cpp" />
+    <ClCompile Include="DisplayView.cpp" />
+    <ClCompile Include="LoginDlg.cpp" />
+    <ClCompile Include="SelectView.cpp" />
+    <ClCompile Include="InfoFile.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

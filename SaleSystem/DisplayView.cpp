@@ -3,7 +3,7 @@
 
 #include "pch.h"
 #include "SaleSystem.h"
-#include "CDisplayView.h"
+#include "DisplayView.h"
 
 
 // CDisplayView
@@ -11,7 +11,7 @@
 IMPLEMENT_DYNCREATE(CDisplayView, CFormView)
 
 CDisplayView::CDisplayView()
-	: CFormView(IDD_CDisplayView)
+	: CFormView(IDD_DISPLAY_VIEW)
 {
 
 }

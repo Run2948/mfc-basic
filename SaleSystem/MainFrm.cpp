@@ -7,8 +7,8 @@
 #include "SaleSystem.h"
 
 #include "MainFrm.h"
-#include "CSelectView.h"
-#include "CDisplayView.h"
+#include "SelectView.h"
+#include "DisplayView.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -57,7 +57,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	SetClassLong(m_hWnd, GCL_HICON, (LONG)AfxGetApp()->LoadIconW(IDI_ICON_WIN));
 
 	// 修改标题（右侧）
-	SetTitle(TEXT("V1.0"));
+	SetTitle(TEXT("SaleSystem"));
 
 	// 修改主窗口大小
 	MoveWindow(0, 0, 800, 500);

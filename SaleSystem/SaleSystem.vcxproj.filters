@@ -39,10 +39,16 @@
     <ClInclude Include="pch.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CSelectView.h">
+    <ClInclude Include="SelectView.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CDisplayView.h">
+    <ClInclude Include="DisplayView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="InfoFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginDlg.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,10 +68,16 @@
     <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CSelectView.cpp">
+    <ClCompile Include="SelectView.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CDisplayView.cpp">
+    <ClCompile Include="DisplayView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="InfoFile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginDlg.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -3,7 +3,7 @@
 
 #include "pch.h"
 #include "SaleSystem.h"
-#include "CSelectView.h"
+#include "SelectView.h"
 
 
 // CSelectView
@@ -77,10 +77,10 @@ void CSelectView::OnTvnSelchanged(NMHDR* pNMHDR, LRESULT* pResult)
 	LPNMTREEVIEW pNMTreeView = reinterpret_cast<LPNMTREEVIEW>(pNMHDR);
 	// TODO: 在此添加控件通知处理程序代码
 	// 获取当前选中的项
-	HTREEITEM item = m_treeCtrl->GetSelectedItem();
+	//HTREEITEM item = m_treeCtrl->GetSelectedItem();
 	// 根据选中项 获取文本
-	CString str = m_treeCtrl->GetItemText(item);
-	MessageBox(str);
+	//CString str = m_treeCtrl->GetItemText(item);
+	//MessageBox(str);
 
 	*pResult = 0;
 }
