@@ -39,6 +39,12 @@
     <ClInclude Include="pch.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="CSelectView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CDisplayView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SaleSystem.cpp">
@@ -54,6 +60,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CSelectView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CDisplayView.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
