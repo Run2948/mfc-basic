@@ -195,6 +195,7 @@
     <ClInclude Include="SaleSystemDoc.h" />
     <ClInclude Include="SaleSystemView.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="UserDlg.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DisplayView.cpp" />
@@ -211,6 +212,7 @@
     <ClCompile Include="SaleSystem.cpp" />
     <ClCompile Include="SaleSystemDoc.cpp" />
     <ClCompile Include="SaleSystemView.cpp" />
+    <ClCompile Include="UserDlg.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="SaleSystem.rc" />
