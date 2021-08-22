@@ -9,6 +9,7 @@
 #include "MainFrm.h"
 #include "SelectView.h"
 #include "DisplayView.h"
+#include "UserDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -20,6 +21,15 @@ IMPLEMENT_DYNCREATE(CMainFrame, CFrameWnd)
 
 BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
 	ON_WM_CREATE()
+
+	//ON_MESSAGE响应的是自定义消息
+	//产生NM_X消息，自动调用OnMyChange函数
+	ON_MESSAGE(NM_A, OnMyChange)
+	ON_MESSAGE(NM_B, OnMyChange)
+	ON_MESSAGE(NM_C, OnMyChange)
+	ON_MESSAGE(NM_D, OnMyChange)
+	ON_MESSAGE(NM_E, OnMyChange)
+
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -110,4 +120,43 @@ BOOL CMainFrame::OnCreateClient(LPCREATESTRUCT lpcs, CCreateContext* pContext)
 
 	// return CFrameWnd::OnCreateClient(lpcs, pContext);
 	return TRUE; //  用户自定义拆分
+}
+
+LRESULT CMainFrame::OnMyChange(WPARAM wParam, LPARAM lParam)
+{
+	CCreateContext  Context;
+	switch (wParam)
+	{
+	case NM_A:
+		// MessageBox(_T("NM_A"));
+	{
+		// CUserDlg类需要包含头文件#include "UserDlg.h"
+		Context.m_pNewViewClass = RUNTIME_CLASS(CUserDlg);
+		Context.m_pCurrentFrame = this;
+		Context.m_pLastView = (CFormView*)m_Splitter.GetPane(0, 1);
+		m_Splitter.DeleteView(0, 1);
+		m_Splitter.CreateView(0, 1, RUNTIME_CLASS(CUserDlg), CSize(600, 500), &Context);
+		CUserDlg* pNewView = (CUserDlg*)m_Splitter.GetPane(0, 1);
+		m_Splitter.RecalcLayout();
+		pNewView->OnInitialUpdate();
+		m_Splitter.SetActivePane(0, 1);
+	}
+	break;
+	case NM_B:
+		MessageBox(_T("NM_B"));
+		break;
+	case NM_C:
+		MessageBox(_T("NM_C"));
+		break;
+	case NM_D:
+		MessageBox(_T("NM_D"));
+		break;
+	case NM_E:
+		MessageBox(_T("NM_E"));
+		break;
+	default:
+		MessageBox(_T("error"));
+	}
+
+	return 0;
 }

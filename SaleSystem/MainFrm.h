@@ -3,6 +3,13 @@
 //
 
 #pragma once
+//WM_USER 是用户自定义消息的一个起始值
+//WM_USER+100是为了区分系统消息和用户消息，避免冲突
+#define NM_A	(WM_USER + 100)
+#define NM_B	(WM_USER + 101)
+#define NM_C	(WM_USER + 102)
+#define NM_D	(WM_USER + 103)
+#define NM_E	(WM_USER + 104)
 
 class CMainFrame : public CFrameWnd
 {
@@ -38,7 +45,8 @@ protected:
 	DECLARE_MESSAGE_MAP()
 
 	virtual BOOL OnCreateClient(LPCREATESTRUCT lpcs, CCreateContext* pContext);
-
+	// 自定义消息处理函数
+    afx_msg LRESULT OnMyChange(WPARAM wParam, LPARAM lParam);
 private:
 	CSplitterWnd m_Splitter;
 };
