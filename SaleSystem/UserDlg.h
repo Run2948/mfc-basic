@@ -32,6 +32,10 @@ private:
 	CString m_name;
 	CString m_newPwd;
 	CString m_surePwd;
+public:
+	virtual void OnInitialUpdate();
+	afx_msg void OnBnClickedButton1();
+	afx_msg void OnBnClickedButton2();
 };
 
 
