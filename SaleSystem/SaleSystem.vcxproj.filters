@@ -33,7 +33,7 @@
     <ClInclude Include="SaleSystemView.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Resource.h">
+    <ClInclude Include="resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="pch.h">
@@ -52,6 +52,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="UserDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SellDlg.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -84,6 +87,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="UserDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SellDlg.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

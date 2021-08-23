@@ -9,6 +9,7 @@
 #include "MainFrm.h"
 #include "SelectView.h"
 #include "DisplayView.h"
+#include "SellDlg.h"
 #include "UserDlg.h"
 
 #ifdef _DEBUG
@@ -143,8 +144,20 @@ LRESULT CMainFrame::OnMyChange(WPARAM wParam, LPARAM lParam)
 	}
 	break;
 	case NM_B:
-		MessageBox(_T("NM_B"));
-		break;
+		// MessageBox(_T("NM_B"));
+	{
+		// CSellDlg类需要包含头文件#include "SellDlg.h"
+		Context.m_pNewViewClass = RUNTIME_CLASS(CSellDlg);
+		Context.m_pCurrentFrame = this;
+		Context.m_pLastView = (CFormView*)m_Splitter.GetPane(0, 1);
+		m_Splitter.DeleteView(0, 1);
+		m_Splitter.CreateView(0, 1, RUNTIME_CLASS(CSellDlg), CSize(600, 500), &Context);
+		CSellDlg* pNewView = (CSellDlg*)m_Splitter.GetPane(0, 1);
+		m_Splitter.RecalcLayout();
+		pNewView->OnInitialUpdate();
+		m_Splitter.SetActivePane(0, 1);
+	}
+	break;
 	case NM_C:
 		MessageBox(_T("NM_C"));
 		break;

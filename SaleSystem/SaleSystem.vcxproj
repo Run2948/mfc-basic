@@ -190,10 +190,11 @@
     <ClInclude Include="InfoFile.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Resource.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="SaleSystem.h" />
     <ClInclude Include="SaleSystemDoc.h" />
     <ClInclude Include="SaleSystemView.h" />
+    <ClInclude Include="SellDlg.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="UserDlg.h" />
   </ItemGroup>
@@ -212,6 +213,7 @@
     <ClCompile Include="SaleSystem.cpp" />
     <ClCompile Include="SaleSystemDoc.cpp" />
     <ClCompile Include="SaleSystemView.cpp" />
+    <ClCompile Include="SellDlg.cpp" />
     <ClCompile Include="UserDlg.cpp" />
   </ItemGroup>
   <ItemGroup>
