@@ -63,6 +63,9 @@
     <ClInclude Include="AddDlg.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="DelDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SaleSystem.cpp">
@@ -102,6 +105,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="AddDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DelDlg.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -184,6 +184,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AddDlg.h" />
+    <ClInclude Include="DelDlg.h" />
     <ClInclude Include="DisplayView.h" />
     <ClInclude Include="InfoDlg.h" />
     <ClInclude Include="LoginDlg.h" />
@@ -202,6 +203,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AddDlg.cpp" />
+    <ClCompile Include="DelDlg.cpp" />
     <ClCompile Include="DisplayView.cpp" />
     <ClCompile Include="InfoDlg.cpp" />
     <ClCompile Include="LoginDlg.cpp" />

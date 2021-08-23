@@ -9,6 +9,7 @@
 #include "MainFrm.h"
 
 #include "AddDlg.h"
+#include "DelDlg.h"
 #include "SelectView.h"
 #include "DisplayView.h"
 #include "InfoDlg.h"
@@ -192,8 +193,20 @@ LRESULT CMainFrame::OnMyChange(WPARAM wParam, LPARAM lParam)
 	}
 	break;
 	case NM_E:
-		MessageBox(_T("NM_E"));
-		break;
+		// MessageBox(_T("NM_E"));
+	{
+		// CInfoDlg类需要包含头文件#include "DelDlg.h"
+		Context.m_pNewViewClass = RUNTIME_CLASS(CDelDlg);
+		Context.m_pCurrentFrame = this;
+		Context.m_pLastView = (CFormView*)m_Splitter.GetPane(0, 1);
+		m_Splitter.DeleteView(0, 1);
+		m_Splitter.CreateView(0, 1, RUNTIME_CLASS(CDelDlg), CSize(600, 500), &Context);
+		CDelDlg* pNewView = (CDelDlg*)m_Splitter.GetPane(0, 1);
+		m_Splitter.RecalcLayout();
+		pNewView->OnInitialUpdate();
+		m_Splitter.SetActivePane(0, 1);
+	}
+	break;
 	default:
 		MessageBox(_T("error"));
 	}
