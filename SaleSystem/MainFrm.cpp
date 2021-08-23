@@ -35,6 +35,12 @@ BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
 	ON_MESSAGE(NM_D, OnMyChange)
 	ON_MESSAGE(NM_E, OnMyChange)
 
+	ON_COMMAND(ID_APP_EXIT, &CMainFrame::OnAppExit)
+	ON_COMMAND(ID_USER_VIEW, &CMainFrame::OnUserView)
+	ON_COMMAND(ID_SELL_VIEW, &CMainFrame::OnSellView)
+	ON_COMMAND(ID_INFO_VIEW, &CMainFrame::OnInfoView)
+	ON_COMMAND(ID_ADD_VIEW, &CMainFrame::OnAddView)
+	ON_COMMAND(ID_DEL_VIEW, &CMainFrame::OnDelView)
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -212,4 +218,46 @@ LRESULT CMainFrame::OnMyChange(WPARAM wParam, LPARAM lParam)
 	}
 
 	return 0;
+}
+
+
+void CMainFrame::OnAppExit()
+{
+	// TODO: 在此添加命令处理程序代码
+	exit(0);
+}
+
+
+void CMainFrame::OnUserView()
+{
+	// TODO: 在此添加命令处理程序代码
+	::PostMessage(AfxGetMainWnd()->GetSafeHwnd(), NM_A, (WPARAM)NM_A, (LPARAM)0);
+}
+
+
+void CMainFrame::OnSellView()
+{
+	// TODO: 在此添加命令处理程序代码
+	::PostMessage(AfxGetMainWnd()->GetSafeHwnd(), NM_B, (WPARAM)NM_B, (LPARAM)0);
+}
+
+
+void CMainFrame::OnInfoView()
+{
+	// TODO: 在此添加命令处理程序代码
+	::PostMessage(AfxGetMainWnd()->GetSafeHwnd(), NM_C, (WPARAM)NM_C, (LPARAM)0);
+}
+
+
+void CMainFrame::OnAddView()
+{
+	// TODO: 在此添加命令处理程序代码
+	::PostMessage(AfxGetMainWnd()->GetSafeHwnd(), NM_D, (WPARAM)NM_D, (LPARAM)0);
+}
+
+
+void CMainFrame::OnDelView()
+{
+	// TODO: 在此添加命令处理程序代码
+	::PostMessage(AfxGetMainWnd()->GetSafeHwnd(), NM_E, (WPARAM)NM_E, (LPARAM)0);
 }

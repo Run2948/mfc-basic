@@ -49,6 +49,13 @@ protected:
     afx_msg LRESULT OnMyChange(WPARAM wParam, LPARAM lParam);
 private:
 	CSplitterWnd m_Splitter;
+public:
+	afx_msg void OnAppExit();
+	afx_msg void OnUserView();
+	afx_msg void OnSellView();
+	afx_msg void OnInfoView();
+	afx_msg void OnAddView();
+	afx_msg void OnDelView();
 };
 
 
