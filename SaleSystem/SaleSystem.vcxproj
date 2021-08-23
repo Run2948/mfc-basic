@@ -184,6 +184,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="DisplayView.h" />
+    <ClInclude Include="InfoDlg.h" />
     <ClInclude Include="LoginDlg.h" />
     <ClInclude Include="SelectView.h" />
     <ClInclude Include="framework.h" />
@@ -200,6 +201,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DisplayView.cpp" />
+    <ClCompile Include="InfoDlg.cpp" />
     <ClCompile Include="LoginDlg.cpp" />
     <ClCompile Include="SelectView.cpp" />
     <ClCompile Include="InfoFile.cpp" />
